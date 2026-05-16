@@ -19,13 +19,14 @@ function createWindow() {
     mainWindow.loadURL('http://localhost:3000');
     mainWindow.webContents.openDevTools();
   } else {
-    mainWindow.loadFile(path.join(__dirname, 'dist/index.html'));
+    mainWindow.loadFile(path.join(__dirname, '..', 'dist', 'index.html'));
   }
 }
 
 function startServer() {
   const expressApp = express();
-  expressApp.use(express.static(path.join(__dirname, 'dist')));
+  const distPath = path.join(__dirname, '..', 'dist');
+  expressApp.use(express.static(distPath));
   server = expressApp.listen(3000, '0.0.0.0', () => {
     console.log('Server running on port 3000');
   });
