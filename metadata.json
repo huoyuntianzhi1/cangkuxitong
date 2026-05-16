@@ -1,0 +1,6 @@
+{
+  "name": "口腔门诊活动物料系统",
+  "description": "用于管理口腔门诊非医疗活动物料的采购、使用、剩余库存及安全库存预警的本地仓库管理系统。",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
